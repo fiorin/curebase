@@ -85,10 +85,15 @@ Useful commands (run from `server/`):
 ```sh
 npm run db:generate
 npm run db:deploy
+```
+
+For a local schema change, create and commit a Prisma migration:
+
+```sh
 npx prisma migrate dev --name describe_schema_change
 ```
 
-The Docker API container runs `db:deploy` on startup. For local schema changes, create and commit a Prisma migration with `migrate dev`, then apply committed migrations with `db:deploy`.
+The Docker API container runs `db:deploy` on startup. Use `db:deploy` to apply committed migrations.
 
 ### Checks
 
